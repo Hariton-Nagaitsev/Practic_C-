@@ -14,7 +14,7 @@ namespace Algorithm_Square
 			double oldx = 0;
 		  do
 		  {
-			  oldx = x;
+			oldx = x;
         		x = (x + numb / x) / 2;
 		  }
 		  while(oldx != x);
@@ -23,8 +23,8 @@ namespace Algorithm_Square
 		
 		public static void Output(double r)
 		{
-		  double check = r * r;
-		  Console.WriteLine($"Square root = {r}, of a number {check}");
+		  	double check = r * r;
+		  	Console.WriteLine($"Square root = {r}, of a number {check}");
 		}
 		public static void Main(string[] args)
 		{
@@ -35,3 +35,53 @@ namespace Algorithm_Square
 		}
 	}
 }
+
+
+// Второй вариант через return
+/*
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Algorithm_Square
+{
+	public class Sqrt
+  {
+		public static double Square_root(double numb)
+		
+		{
+			double x = 1;
+			double oldx = 0;
+		  do
+		  {
+			oldx = x;
+        		x = (x + numb / x) / 2;
+		  }
+		  while(oldx != x);
+		  return x;
+		}
+		
+		public static void Output(double r)
+		{
+		  	double check = r * r;
+		  	Console.WriteLine($"Square root = {r}, of a number {check}");
+		}
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("Enter numb: ");
+			double numb = double.Parse(Console.ReadLine());
+      
+      			double cin = Square_root(numb);
+			Output(cin);
+		}
+	}
+}
+*\
+
+
+
+
+
+
