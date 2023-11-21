@@ -7,7 +7,7 @@ namespace HelloWorld
 {
 	public class Program
 	{
-	  public static int Euclid(int a, int b, out int c)
+	  public static int Euclid(int a, int b, out int nod)
 	  {
 	    while (a != b)
 	    {
@@ -20,8 +20,8 @@ namespace HelloWorld
 	        b = b - a;
 	      }
 	    }
-	    c = b;
-	    return c;
+	    nod = b;
+	    return nod;
 	  }
 		public static void Main(string[] args)
 		{
@@ -30,8 +30,8 @@ namespace HelloWorld
 			Console.WriteLine("Enter 2 number");       
 			int b = int.Parse(Console.ReadLine());
 			
-			Euclid(a,b, out int c);
-			Console.WriteLine($"Greatest common divisor = {c}");
+			Euclid(a,b, out int nod);
+			Console.WriteLine($"Greatest common divisor = {nod}");
 		}
 	}
 }
