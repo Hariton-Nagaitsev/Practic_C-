@@ -19,7 +19,7 @@ namespace Sum
           while (num > 0)
           {
             d = num % 10;
-	    suma = summ + d;
+	    summ = summ + d;
 	    num = num / 10;
           }
 	Console.WriteLine(summ);
