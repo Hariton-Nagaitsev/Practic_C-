@@ -28,7 +28,7 @@ namespace Algorithm_Square
 		{
 			Console.WriteLine("Enter numb: ");
 			double numb = double.Parse(Console.ReadLine());
-      Square_root(numb, out double nu);
+      			Square_root(numb, out double nu);
 			Output(nu);
 		}
 	}
