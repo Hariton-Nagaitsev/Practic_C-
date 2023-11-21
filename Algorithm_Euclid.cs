@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace HelloWorld
+namespace Eucl
 {
 	public class Program
 	{
@@ -35,3 +35,39 @@ namespace HelloWorld
 		}
 	}
 }
+
+
+/* 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Eucl
+{
+
+	public class Program
+ 
+	{
+	  public static int Euclid(int a, int b)
+	  {
+	    int nod;
+	    while (a != b)
+	    {
+	      _ = a > b ? a -= b : b -= a;
+	    }
+	    nod = a;
+	    return nod;
+	  }
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("Enter 1 number");
+			int a = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter 2 number");       
+			int b = int.Parse(Console.ReadLine());
+			
+			int nod = Euclid(a, b);
+			Console.WriteLine($"Greatest common divisor = {nod}");
+		}
+	}
+}*/
