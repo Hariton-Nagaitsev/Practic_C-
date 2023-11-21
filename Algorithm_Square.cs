@@ -78,7 +78,7 @@ namespace Algorithm_Square
 		}
 	}
 }
-*\
+*/
 
 
 
