@@ -11,10 +11,10 @@ namespace Sum
     {
         static void Main()
         {
-          int num = int.Parse(Console.ReadLine());
-          int summ = 0;
-          int mult = 1;
-          int d;
+          long num = long.Parse(Console.ReadLine());
+          long summ = 0;
+          long mult = 1;
+          long d;
           
           while (num > 0)
           {
