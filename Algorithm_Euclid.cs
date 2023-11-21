@@ -80,7 +80,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace HelloWorld
+namespace Eucl
 {
 	public class Program
 	{
