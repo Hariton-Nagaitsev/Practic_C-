@@ -13,8 +13,8 @@ namespace Algorithm_Square
 		  double oldx = 0;
 		  do
 		  {
-		    oldx = x;
-        x = (x + numb / x) / 2;
+		    	oldx = x;
+        		x = (x + numb / x) / 2;
 		  }
 		  while(oldx != x);
 		  nu = x;
