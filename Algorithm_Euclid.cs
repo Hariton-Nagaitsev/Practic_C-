@@ -59,7 +59,7 @@ namespace Eucl
 	    		}
 	    		nod = a;
 	   		return nod;
-	  		}
+	  	}
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Enter 1 number");
@@ -91,7 +91,7 @@ namespace Eucl
 	    		{
 	      		_ = a > b ? a -= b : b -= a;
 	    		}
-	    		}
+	    	}
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Enter 1 number");
