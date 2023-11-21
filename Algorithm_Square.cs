@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -7,18 +6,20 @@ namespace Algorithm_Square
 {
 	public class Sqrt
   {
-	  public static void Square_root(double numb, out double nu)
+		public static void Square_root(double numb, out double nu)
+		
 		{
-		  double x = 1;
-		  double oldx = 0;
+			double x = 1;
+			double oldx = 0;
 		  do
 		  {
-		    	oldx = x;
+			  oldx = x;
         		x = (x + numb / x) / 2;
 		  }
 		  while(oldx != x);
 		  nu = x;
 		}
+		
 		public static void Output(double r)
 		{
 		  double check = r * r;
