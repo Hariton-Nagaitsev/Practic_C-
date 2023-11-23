@@ -16,7 +16,7 @@ namespace HelloWorld
 			Console.WriteLine("Enter value c");
 			double c = double.Parse(Console.ReadLine());
 			
-			dynamic input;
+			double input;
 			
 			if (a != 0)
 			{
@@ -41,13 +41,13 @@ namespace HelloWorld
 			  Console.WriteLine("Equation is not square");
 			}
 			
-			
 		}
 		
-		public static dynamic Sqr(double a, double b, double c, out double x1, out double x2)
+		public static double Sqr(double a, double b, double c, out double x1, out double x2)
 		{
 		  
-		  double d = Math.Pow((d),2) - 4 * a * c;
+		    
+		    double d = Math.Pow((b),2) - 4 * a * c;
 		  
 		    if (d > 0)
 		    {
@@ -56,9 +56,10 @@ namespace HelloWorld
 		    }
 		    else
 		    {
-		      x1 = 0;
-		      x2 = 0;
+		        x1 = 0;
+		        x2 = 0;
 		    }
+
+		  }
 		}
-	}
 }
