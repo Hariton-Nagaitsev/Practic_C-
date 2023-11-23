@@ -16,39 +16,49 @@ namespace HelloWorld
 			Console.WriteLine("Enter value c");
 			double c = double.Parse(Console.ReadLine());
 			
-			dynamic input = Sqr(a,b,c, out double x1, out double x2);
+			dynamic input;
 			
+			if (a != 0)
+			{
+			  
+			input = Sqr(a, b, c, out double x1, out double x2);
+			
+			  if (x1 == 0 && x2 == 0)
+			  {
+			    Console.WriteLine("no roots");
+			  }
+			  else if (x1 == x2)
+			  {
+			    Console.WriteLine($"roots = {x1}");
+			  }
+			  else
+			  {
+			    Console.WriteLine($"roots = {x1} and {x2}");
+			  }
+			}
+			else
+			{
+			  Console.WriteLine("Equation is not square");
+			}
 			
 			
 		}
 		
-		
 		public static dynamic Sqr(double a, double b, double c, out double x1, out double x2)
 		{
-
 		  
-		  if (a != 0)
-		  {
-
 		  double d = Math.Pow((d),2) - 4 * a * c;
 		  
 		    if (d > 0)
 		    {
-		      x1 = -b + Math.Sqr(d)) / 2 * a;
-		      x2 = -b - Math.Sqr(d)) / 2 * a;
+		       x1 = (-b + Math.Sqrt(d)) / 2 * a;
+		       x2 = (-b - Math.Sqrt(d)) / 2 * a;
 		    }
 		    else
 		    {
-		      
+		      x1 = 0;
+		      x2 = 0;
 		    }
-		  }
-		  else
-		  {
-		     return "Equation is not square";
-		  }
-		  
-		  
 		}
-		
 	}
 }
