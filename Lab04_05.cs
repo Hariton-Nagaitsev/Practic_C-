@@ -42,8 +42,6 @@ namespace Lab04_05
         }
         public static double Sqr(double a, double b, double c, out double x1, out double x2)
         {
-            x1 = 0;
-            x2 = 0;
             double r = 0;
 
             double d = Math.Pow(b, 2) - 4 * a * c;
