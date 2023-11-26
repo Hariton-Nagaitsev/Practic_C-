@@ -49,11 +49,9 @@ namespace Lab06_04
             Console.WriteLine("Perimetr = {0}", p);
             
         }
-        public static void Write2(double s)
+        public static void Write2(dynamic s)
         {
-
             Console.WriteLine("Square = {0}", s);
-
         }
         public void Sides(double a1, double b1, double c1)
         {
@@ -93,8 +91,7 @@ namespace Lab06_04
 
             if (ok == false)
             {
-                _ = okk.Item1 == true ? square = Math.Round(Math.Sqrt(okk.Item2 * (okk.Item2 - a) * (okk.Item2 - c) * (okk.Item2 - b)), 2) : square = str;
-                
+                _ = okk.Item1 == true ? square = Math.Round(Math.Sqrt(okk.Item2 * (okk.Item2 - a) * (okk.Item2 - c) * (okk.Item2 - b)), 2) : square = str;  
             }
             else 
             {
