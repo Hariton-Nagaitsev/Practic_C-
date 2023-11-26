@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,27 +9,27 @@ namespace Lab05_03
 {
     public class Program
     {
-        static void Input(double[] ints)
+        static void Input(double[] array)                         // Ввод значений в массив
         {
-            for (int i = 0; i < ints.GetLength(0); i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
                 Console.Write("Enter value for [{0}] : ", i);
-                ints[i] = double.Parse(Console.ReadLine());
+                array[i] = double.Parse(Console.ReadLine());
             }
         }
-        static double Summ(double[] a)
+        static double Summ(double[] a)                         // Расчет суммы всех значений
         {
             double sum = a.Sum();
             return sum;
 
         }
-        public static double PlusMinisSum(double[] ints, out double plusSum, out double minusSum)
+        public static double PlusMinisSum(double[] array, out double plusSum, out double minusSum)  // Расчет суммы положительных и отрицательных значений
         {
             plusSum = 0;
             minusSum = 0;
             double r = 0;
 
-            foreach (double i in ints)
+            foreach (double i in array)
             {
                 if (i < 0)
                 {
@@ -41,67 +42,70 @@ namespace Lab05_03
             }
             return r;
         }
-        static void SumSR(double a, double b)
+        static void SumSR(double a, double b)                                   // Расчет среднего значения
         {
             double res = a / b;
             Console.WriteLine(res);
         }
-        static void Sumchet(double[] ints)
+        static void Sumchet(double[] array)                                     // Расчет четных чисел
         {
             double res = 0;
 
-            for (int i = 0; i < ints.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                if (ints[i] % 2 == 0)
+                if (array[i] % 2 == 0)
                 {
-                    res += ints[i];
+                    res += array[i];
                 }
             }
             Console.WriteLine(res);
         }
-        static void SumNochet(double[] ints)
+        static void SumNochet(double[] array)                                   // Расчет не четных чисел
         {
             double res = 0;
 
-            for (int i = 0; i < ints.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                if (ints[i] % 2 != 0)
+                if (array[i] % 2 != 0)
                 {
-                    res += ints[i];
+                    res += array[i];
                 }
             }
             Console.WriteLine(res);
         }
-        static void MinMax(double[] ints)
+        static void MinMax(double[] array)                      // Нахождение максимальных и минимальных значений и их индексов
         {
-            double min = (ints.Min());
+            double min = (array.Min());
 
-            double index = Array.FindIndex(ints, delegate (double i)
+            double index = Array.FindIndex(array, delegate (double i)
             {
                 return i == min;
             });
 
-            double max = (ints.Max());
+            double max = (array.Max());
 
-            double index2 = Array.FindIndex(ints, delegate (double i)
+            double index2 = Array.FindIndex(array, delegate (double i)
             {
                 return i == max;
             });
 
             Console.WriteLine("Min = {0}, Max = {1}, index Min = {2}, index Max = {3}", min, max, index, index2);
         }
-        static void Output(double[] ints)
+
+
+
+        static void Output(double[] array)                             // Вывод значений массива
         {
-            for (int i = 0; i < ints.GetLength(0); i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
-                Console.Write("{0} ", ints[i]);
+                Console.Write("{0} ", array[i]);
             }
             Console.WriteLine();
         }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter array length ");
-            int cout = int.Parse(Console.ReadLine());
+            int cout = int.Parse(Console.ReadLine());              // Ввод размера массива
             double[] a = new double[cout];
             Input(a);
             Output(a);
