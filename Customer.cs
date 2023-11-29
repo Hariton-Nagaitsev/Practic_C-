@@ -36,7 +36,7 @@ namespace Customer
             if (callType == 'Г')
             {
                 Console.WriteLine("У вас есть возможность изменить тариф на: ##После10МинутВ2РазаДешевле##\nНажмите 1\nЛибо " +
-                    "остаться на: ##Повременный##\n Нажмите 0 ");
+                    "остаться на: ##Повременный##\nНажмите 0 ");
                 int tarif = int.Parse(Console.ReadLine());
 
                 if (tarif == 1)
@@ -53,7 +53,7 @@ namespace Customer
                 if (callType == 'М') 
             {
                 Console.WriteLine("У вас есть возможность изменить тариф на: ##ПлатиМеньшеДо5Минут##\nНажмите 2\nЛибо " +
-                    "остаться на: ##Повременный##\n Нажмите 0 ");
+                    "остаться на: ##Повременный##\nНажмите 0 ");
                 int tarif = int.Parse(Console.ReadLine());
 
                 if (tarif == 2)
