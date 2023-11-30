@@ -10,6 +10,7 @@ namespace Customer
     {
         public string Name { get; set; }
         public double Balance { get; private set; }
+        Tarif tar = new Tarif();
 
         public Customer(string name, double balance = 100)
         {
@@ -30,7 +31,6 @@ namespace Customer
                 Balance += amountPaid;
         }
 
-        Tarif tar = new Tarif();
         public void RecordCall(char callType, double minutes)
         {
             if (callType == 'Г')
