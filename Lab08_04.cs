@@ -47,7 +47,6 @@ namespace Lab06_04
                     
         }
         
-
         public void Write()
         {
 
