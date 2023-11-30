@@ -14,9 +14,8 @@ namespace Lab06_04
         public static void Main(string[] args)
         {
             Tringle input = new Tringle();
-           
+            input.Input();
             input.Write();
-
             double perim = input.Perimeter(); input.Write1(perim);
             dynamic sqr = input.Sqr(); input.Write2(sqr);
 
@@ -27,18 +26,27 @@ namespace Lab06_04
     {
         public double a, b, c;
 
-        public Tringle() 
+        public Tringle(double a, double b, double C) 
         {
-            Console.WriteLine("Enter a"); double a = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter b"); double b = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter c"); double c = double.Parse(Console.ReadLine());
-
             this.a = a;
             this.b = b;
             this.c = c;
         
         }
-
+        public Tringle(){}
+        
+        public double Input()
+        {
+            Console.WriteLine("Enter a"); double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter b"); double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter c"); double c = double.Parse(Console.ReadLine());
+          
+            Tringle input = new Tringle(a,b,c);
+          
+            return input;
+                    
+        }
+        
 
         public void Write()
         {
