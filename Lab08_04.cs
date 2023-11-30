@@ -24,7 +24,7 @@ namespace Lab06_04
 
     class Tringle
     {
-        public double a, b, c;
+        private double a, b, c;
 
         public Tringle(double a, double b, double C) 
         {
